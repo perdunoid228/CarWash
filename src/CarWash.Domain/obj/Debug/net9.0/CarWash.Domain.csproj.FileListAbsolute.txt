@@ -1,0 +1,11 @@
+C:\Users\User\CarWash\src\CarWash.Domain\bin\Debug\net9.0\CarWash.Domain.deps.json
+C:\Users\User\CarWash\src\CarWash.Domain\bin\Debug\net9.0\CarWash.Domain.dll
+C:\Users\User\CarWash\src\CarWash.Domain\bin\Debug\net9.0\CarWash.Domain.pdb
+C:\Users\User\CarWash\src\CarWash.Domain\obj\Debug\net9.0\CarWash.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\CarWash\src\CarWash.Domain\obj\Debug\net9.0\CarWash.Domain.AssemblyInfoInputs.cache
+C:\Users\User\CarWash\src\CarWash.Domain\obj\Debug\net9.0\CarWash.Domain.AssemblyInfo.cs
+C:\Users\User\CarWash\src\CarWash.Domain\obj\Debug\net9.0\CarWash.Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\CarWash\src\CarWash.Domain\obj\Debug\net9.0\CarWash.Domain.dll
+C:\Users\User\CarWash\src\CarWash.Domain\obj\Debug\net9.0\refint\CarWash.Domain.dll
+C:\Users\User\CarWash\src\CarWash.Domain\obj\Debug\net9.0\CarWash.Domain.pdb
+C:\Users\User\CarWash\src\CarWash.Domain\obj\Debug\net9.0\ref\CarWash.Domain.dll
