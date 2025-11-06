@@ -664,7 +664,8 @@
       "System.Threading.Channels/7.0.0": {},
       "CarWash.Application/1.0.0": {
         "dependencies": {
-          "CarWash.Domain": "1.0.0"
+          "CarWash.Domain": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection": "9.0.10"
         },
         "runtime": {
           "CarWash.Application.dll": {

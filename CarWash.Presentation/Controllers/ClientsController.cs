@@ -21,7 +21,7 @@ public class ClientsController : ControllerBase
         => await _context.Clients.ToListAsync();
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<Client>> Get(int id)
+    public async Task<ActionResult<Client>> Get(Guid id) // Изменили int на Guid
     {
         var client = await _context.Clients.FindAsync(id);
         return client == null ? NotFound() : client;
@@ -37,7 +37,7 @@ public class ClientsController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> Put(int id, Client client)
+    public async Task<IActionResult> Put(Guid id, Client client) // Изменили int на Guid
     {
         if (id != client.Id) return BadRequest();
 
@@ -48,7 +48,7 @@ public class ClientsController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    public async Task<IActionResult> Delete(int id)
+    public async Task<IActionResult> Delete(Guid id) // Изменили int на Guid
     {
         var client = await _context.Clients.FindAsync(id);
         if (client == null) return NotFound();

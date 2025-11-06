@@ -14,5 +14,5 @@
 4. dotnet build
 5. dotnet ef migrations add InitialCreate --project CarWash.Infrastructure --startup-project CarWash.Presentation
     dotnet ef database update --project CarWash.Infrastructure --startup-project CarWash.Presentation
-6. dotnet run --project CarWash.Presentаtion
+6. dotnet run --project CarWash.Presentation
 7. http://localhost:5044/swagger
