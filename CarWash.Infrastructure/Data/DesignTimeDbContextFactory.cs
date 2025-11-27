@@ -8,8 +8,7 @@ public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<CarWashDbC
     public CarWashDbContext CreateDbContext(string[] args)
     {
         var optionsBuilder = new DbContextOptionsBuilder<CarWashDbContext>();
-        optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=carwash_db;Username=postgres;Password=postgres");
-
+        optionsBuilder.UseSqlite("Data Source=carwash.db");
         return new CarWashDbContext(optionsBuilder.Options);
     }
 }
