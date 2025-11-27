@@ -1,14 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using CarWash.Infrastructure.Contexts;
 
 namespace CarWash.Infrastructure.Data;
 
-public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<CarWashDbContext>
+public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<ApplicationContext>
 {
-    public CarWashDbContext CreateDbContext(string[] args)
+    public ApplicationContext CreateDbContext(string[] args)
     {
-        var optionsBuilder = new DbContextOptionsBuilder<CarWashDbContext>();
-        optionsBuilder.UseSqlite("Data Source=carwash.db");
-        return new CarWashDbContext(optionsBuilder.Options);
+        var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+        optionsBuilder.UseSqlServer("YourConnectionStringHere");
+
+        return new ApplicationContext(optionsBuilder.Options);
     }
 }

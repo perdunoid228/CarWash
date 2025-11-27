@@ -1,33 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\CarWash\\CarWash.Infrastructure\\CarWash.Infrastructure.csproj": {}
+    "C:\\Users\\User\\Carwash\\CarWash.Infrastructure\\CarWash.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\CarWash\\CarWash.Application\\CarWash.Application.csproj": {
+    "C:\\Users\\User\\Carwash\\CarWash.Application\\CarWash.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\CarWash\\CarWash.Application\\CarWash.Application.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Carwash\\CarWash.Application\\CarWash.Application.csproj",
         "projectName": "CarWash.Application",
-        "projectPath": "C:\\Users\\User\\CarWash\\CarWash.Application\\CarWash.Application.csproj",
+        "projectPath": "C:\\Users\\User\\Carwash\\CarWash.Application\\CarWash.Application.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\CarWash\\CarWash.Application\\obj\\",
+        "outputPath": "C:\\Users\\User\\Carwash\\CarWash.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\User\\CarWash\\CarWash.Domain\\CarWash.Domain.csproj": {
-                "projectPath": "C:\\Users\\User\\CarWash\\CarWash.Domain\\CarWash.Domain.csproj"
+              "C:\\Users\\User\\Carwash\\CarWash.Core\\CarWash.Core.csproj": {
+                "projectPath": "C:\\Users\\User\\Carwash\\CarWash.Core\\CarWash.Core.csproj"
               }
             }
           }
@@ -36,17 +36,17 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -63,31 +63,31 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.121/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User\\CarWash\\CarWash.Domain\\CarWash.Domain.csproj": {
+    "C:\\Users\\User\\Carwash\\CarWash.Core\\CarWash.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\CarWash\\CarWash.Domain\\CarWash.Domain.csproj",
-        "projectName": "CarWash.Domain",
-        "projectPath": "C:\\Users\\User\\CarWash\\CarWash.Domain\\CarWash.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Carwash\\CarWash.Core\\CarWash.Core.csproj",
+        "projectName": "CarWash.Core",
+        "projectPath": "C:\\Users\\User\\Carwash\\CarWash.Core\\CarWash.Core.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\CarWash\\CarWash.Domain\\obj\\",
+        "outputPath": "C:\\Users\\User\\Carwash\\CarWash.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -95,17 +95,11 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",
@@ -122,34 +116,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.121/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User\\CarWash\\CarWash.Infrastructure\\CarWash.Infrastructure.csproj": {
+    "C:\\Users\\User\\Carwash\\CarWash.Infrastructure\\CarWash.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\CarWash\\CarWash.Infrastructure\\CarWash.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Carwash\\CarWash.Infrastructure\\CarWash.Infrastructure.csproj",
         "projectName": "CarWash.Infrastructure",
-        "projectPath": "C:\\Users\\User\\CarWash\\CarWash.Infrastructure\\CarWash.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\User\\Carwash\\CarWash.Infrastructure\\CarWash.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\CarWash\\CarWash.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\User\\Carwash\\CarWash.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\User\\CarWash\\CarWash.Application\\CarWash.Application.csproj": {
-                "projectPath": "C:\\Users\\User\\CarWash\\CarWash.Application\\CarWash.Application.csproj"
+              "C:\\Users\\User\\Carwash\\CarWash.Application\\CarWash.Application.csproj": {
+                "projectPath": "C:\\Users\\User\\Carwash\\CarWash.Application\\CarWash.Application.csproj"
+              },
+              "C:\\Users\\User\\Carwash\\CarWash.Core\\CarWash.Core.csproj": {
+                "projectPath": "C:\\Users\\User\\Carwash\\CarWash.Core\\CarWash.Core.csproj"
               }
             }
           }
@@ -158,31 +155,19 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.10, )"
+              "version": "[8.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Microsoft.Extensions.Logging": {
               "target": "Package",
-              "version": "[9.0.10, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[9.0.10, )"
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -201,7 +186,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.121/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

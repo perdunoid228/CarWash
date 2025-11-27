@@ -1,3 +1,4 @@
+using System;
 using CarWash.Domain.Entities;
 using CarWash.Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
@@ -17,45 +18,91 @@ public class ClientsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IEnumerable<Client>> Get()
-        => await _context.Clients.ToListAsync();
+    public async Task<ActionResult<IEnumerable<Client>>> Get()
+    {
+        try
+        {
+            var clients = await _context.Clients.ToListAsync();
+            return Ok(clients);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            return StatusCode(500, $"Internal server error: {ex.Message}");
+        }
+    }
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<Client>> Get(int id)
+    public async Task<ActionResult<Client>> Get(Guid id) // Исправлено: Guid
     {
-        var client = await _context.Clients.FindAsync(id);
-        return client == null ? NotFound() : client;
+        try
+        {
+            var client = await _context.Clients.FindAsync(id);
+            return client == null ? NotFound() : client;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            return StatusCode(500, $"Internal server error: {ex.Message}");
+        }
     }
 
     [HttpPost]
     public async Task<ActionResult<Client>> Post(Client client)
     {
-        _context.Clients.Add(client);
-        await _context.SaveChangesAsync();
+        try
+        {
+            if (client.Id == Guid.Empty)
+                client.Id = Guid.NewGuid();
+                
+            _context.Clients.Add(client);
+            await _context.SaveChangesAsync();
 
-        return CreatedAtAction(nameof(Get), new { id = client.Id }, client);
+            return CreatedAtAction(nameof(Get), new { id = client.Id }, client);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            return StatusCode(500, $"Internal server error: {ex.Message}");
+        }
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> Put(int id, Client client)
+    public async Task<IActionResult> Put(Guid id, Client client) // Исправлено: Guid вместо @uid
     {
-        if (id != client.Id) return BadRequest();
+        try
+        {
+            if (id != client.Id) return BadRequest(); // Исправлено: Id с заглавной I
 
-        _context.Entry(client).State = EntityState.Modified;
-        await _context.SaveChangesAsync();
+            _context.Entry(client).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
 
-        return NoContent();
+            return NoContent();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            return StatusCode(500, $"Internal server error: {ex.Message}");
+        }
     }
 
     [HttpDelete("{id}")]
-    public async Task<IActionResult> Delete(int id)
+    public async Task<IActionResult> Delete(Guid id) // Исправлено: Guid
     {
-        var client = await _context.Clients.FindAsync(id);
-        if (client == null) return NotFound();
+        try
+        {
+            var client = await _context.Clients.FindAsync(id);
+            if (client == null) return NotFound();
 
-        _context.Clients.Remove(client);
-        await _context.SaveChangesAsync();
+            _context.Clients.Remove(client);
+            await _context.SaveChangesAsync();
 
-        return NoContent();
+            return NoContent();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            return StatusCode(500, $"Internal server error: {ex.Message}");
+        }
     }
 }
